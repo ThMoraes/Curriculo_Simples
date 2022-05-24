@@ -1,0 +1,420 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: fonte1;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+@font-face{
+    font-family: fonte1;
+    src: url("fonte/Abel/Abel-Regular.ttf");
+}
+@font-face{
+    font-family: fonte2;
+    src: url("fonte/Indie_Flower/IndieFlower-Regular.ttf");
+}
+@font-face{
+    font-family: fonte3;
+    src: url("fonte/PT_Serif/PTSerif-Regular.ttf");
+}
+@font-face{
+    font-family: fonte4;
+    src: url("fonte/Caveat/Caveat-VariableFont_wght.ttf");
+}
+
+
+
+/* barra de rolagem */
+body{
+	background:url(img/backgroundTH.png) repeat-x fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    background-position: center;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}  
+body::-webkit-scrollbar-track {
+    background: #000000;
+    border-left: 1px solid #000000;  
+}  
+body::-webkit-scrollbar-thumb {
+    background-color: #1E90FF;  
+    border-radius: 20px;     
+    border: 3px solid #000000;
+}
+
+/*topo*/
+.topo{
+    display: flex;
+    background-color: #000000;
+    padding: 7px 0px;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    top: 0;
+    border-bottom: #4d4d4d 2px solid;
+    z-index:1;
+}
+.divisaoTopo{
+    display: flex;
+    margin-left: 10px;
+}
+.nomeTopo{
+    color: #1E90FF;
+    font-size: 35px;
+    font-family: fonte3;
+}
+
+
+/*geral*/
+.conteudos{
+    margin: auto;    
+}
+.conteudosOcultar{
+    display: none;
+}
+
+.conteudo{
+    min-height: calc( 100vh - 62px);
+    max-height: 100%;
+}
+.conteudo:first-child{
+    margin-top: 62px;
+}
+.conteudo:nth-child(even){
+    background-color: #d2d2d2; 
+}
+.conteudo:nth-child(odd){
+    background-color: #c2e1ff;
+}
+.descricaoConteudo, .conteudoTopico{
+    margin: 20px 10px;
+    margin-left: 25px;
+}
+.divisaoTopoConteudo{
+    padding-top: 32px;
+}
+.formacoes{
+    padding-bottom: 30px;
+}
+
+
+/*conteudoInformacoesPessoal*/
+#conteudoInformacoesPessoal{
+    display: grid;
+    grid-template-columns: auto 300px;
+	background:url(img/fundo/fundoApresentacao.png) repeat-x fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+.informacoesPessoal{
+    display: flex;
+    background-color: #000000cb;
+}
+#informacaoPessoalEsquerda{
+    margin: auto 30px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding:  10px;
+}
+.descricaoPerfilProfissionalEsquerda{
+    font-size: 30px;
+    font-family: fonte3;
+}
+#nomeDonoEsquerda{
+    font-size: 37px;
+    font-weight: bold;
+    font-family: fonte2;
+}
+.descricaoDivisaoInformacaoPessoalEsquerda:first-child{
+    margin-top: 25px;
+}
+.descricaoDivisaoInformacaoPessoalEsquerda{
+    font-size: 20px;
+    padding: 10px 0px;
+    text-indent: 25px;
+    text-align: justify;
+}
+
+#informacoesPessoalDireita{
+    background-color: #1E90FF;
+    height: 100%;
+    color: #000000;
+}
+#informacaoPessoalDireita{
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    margin: auto;
+}
+#divisaoInformacaoPessoalTopo{
+    margin: 15px 0px;
+}
+.divisaoFoto{
+    display: flex;
+}
+.fotoDono{
+    margin: auto;
+    width: 45%;
+    border-radius: 50%;
+}
+#nomeDonoDireita{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    font-family: fonte;
+}
+.descricaoPerfilProfissionalDireita{
+    text-align: center;
+}
+.descricaoPerfilProfissionalDireita#descricaoPerfilProfissionalTexto{
+    font-size: 20px;
+    padding: 5px 0px;
+    font-family: fonte3;
+}
+.descricaoPerfilProfissionalDireita#descricaoPerfilProfissionalTitulo{
+    font-size: 20px;
+    padding: 5px 0px;
+    padding-top: 20px;
+    font-family: fonte3;
+}
+.divdescricaoPerfilProfissionalDireita{
+    text-align: center;
+    margin: 10px;
+    font-family: fonte3;
+}
+.divisaoIcones{
+    display: flex;
+}
+
+.divisaoIcone{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+}
+.divisaoIcone::before {
+    padding: 5px 16px;
+    background-color: #ffffff;
+    border: #ffffff 1px solid;
+    color: #1E90FF;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.imagemIcone{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: rgb(156, 156, 156) 1px solid;
+    animation: imagemIcone 1.5s infinite alternate;
+}
+
+@keyframes imagemIcone {
+    from {
+        transform:translateX(0) scale(0.9);
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+    }
+}
+.divisaoBotaoBaixarCV{
+    display: flex;
+}
+.divisaoBotaoBaixar{
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.botaoBaixar{
+    padding: 5px 16px;
+    background-color: #ffffff;
+    border: #ffffff 1px solid;
+    color: #1E90FF;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+    animation: botaoBaixar 1.5s infinite alternate;
+    font-family: fonte3;
+}
+@keyframes botaoBaixar {
+    from {
+        transform:translateX(0) scale(0.9);
+        border-radius: 5px;
+        /* opacity: 0; */
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+        border-radius: 10px;
+    }
+}
+
+.botaoBaixar:hover,.botaoBaixar:focus {
+    border-radius: 10px;
+    transform:translateX(0) scale(1.1);
+    animation: none;
+}
+
+
+/* Qualificacoes */
+/* #conteudoQualificacoes{
+    padding: 0px 50px;
+}
+.divisaoQaulificacoes{
+    margin: 10px 0px;
+}
+.nomeDescricaoQualificacao{
+    margin: 5px 0px;
+}
+.divisaoQualificacao{
+    margin: 15px 0px;
+    margin-left: 20px;
+}
+.linkCertificado{
+    margin: 5px 0px;
+} */
+
+/* Formacoes */
+#conteudoFormacoes{
+    padding: 10px 50px;
+}
+.nomeFormacoes{
+    font-size: 25px;
+}
+.nomeDescricaoFormacao{
+    margin: 5px 0px;
+}
+.divisaoFormacao{
+    margin: 15px 0px;
+    margin-left: 20px;
+}
+.descricaoLinkCertificado{
+    margin: 5px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.linkCertificado{    
+    color: #000000;
+    position: relative;
+}
+.linkCertificado:before {
+    color: #000000;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #4d4d4d;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.linkCertificado:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.linkCertificado:visited{
+    color: #002040;
+}
+.descricaoFormacao, .tempoFormacao{
+    font-size: 20px;
+}
+/* Competencias */
+#conteudoCompetencias{
+    padding: 10px 50px;
+}
+.nomeCompetencias{
+    font-size: 25px;
+}
+.competencia{
+    margin: 5px 0px;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* botão topo */
+#conteudoBotaoTopo{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    padding: 5px;
+}
+#botaoInicioConteudo{
+    color: rgba(255, 255, 255, 0.542);
+    font-size: 28px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.494);
+    border-radius: 10px;
+}
+#botaoInicioConteudo:hover{
+    color: #000;    
+    background-color: rgba(0, 0, 0, 0.694);
+}
+
+
+@media only screen and (max-width: 564px){
+    #conteudoInformacoesPessoal{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(100vh, auto);
+    }
+    #informacoesPessoalEsquerda{
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    #informacoesPessoalDireita{
+        grid-row-start: 1;
+        grid-row-end: 2;
+    } 
+    .conteudo:first-child{
+        margin-top: 0px;
+    }   
+}
+
+
+@media print{
+    body{
+        background:  #ffffff;
+    }
+    #conteudoBotao{
+        display: none;
+    }
+
+    hr, .topo, .menu, #informacoesPessoalDireita, #perfilProfissional, .descricaoDivisaoInformacaoPessoalEsquerda, #conteudoRedes, #conteudoDownload, .conteudoBotao{
+        display: none;
+    }
+    .conteudo{
+        padding: 2px 20px;
+    }
+    .nomeCertificado{
+    text-decoration: none;
+}
+}

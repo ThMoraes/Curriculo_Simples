@@ -1,0 +1,388 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* barra de rolagem */
+body{
+	background:url(img/backgroundTH.png) repeat-x fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    background-position: center;
+}
+body::-webkit-scrollbar {
+    width: 5px;
+}  
+body::-webkit-scrollbar-track {
+    background: #708090;
+    border-left: 1px solid #b0c4ded0;     
+}  
+body::-webkit-scrollbar-thumb {
+    background-color: #1E90FF;  
+    border-radius: 20px;     
+    border: 3px solid #000;
+}
+
+/*topo*/
+.topo{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    padding: 7px 0px;
+    position: fixed !important;
+    width: 100%;
+    height: auto;
+    top: 0;
+    border-bottom: #4d4d4d 2px solid;
+    z-index:1;
+}
+.divisaoTopo{
+    display: flex;
+}
+.botaoTopo{
+    border-right: solid 2px #74E6D9;
+    margin: auto 5px;
+    border-radius: 5px;
+}
+#nomeBotaoMenu{
+    font-size: 30px;
+}
+.nomeTopo{
+    color: #1E90FF;
+    font-size: 35px;
+}
+
+/* botão menu */
+.botaoMenu{
+    font-weight: bolder;
+    color: #87CEFA;
+    padding: 0px 2px;
+    margin-right: 2px;
+    background-color: #000000;
+    border: #000000 solid 1px;
+    cursor: pointer;
+}
+.botaoMenuOver{
+    font-weight: bolder;
+    color: #000000;
+    padding: 0px 2px;
+    margin-right: 2px;
+    border-radius: 50%;
+    background-color: #87CEFA;
+    border: #000000 solid 1px;
+    cursor: pointer;
+}
+.botaoMenuClose{
+    font-weight: bolder;
+    color: #87CEFA;
+    padding: 0px 2px;
+    margin-right: 2px;
+    background-color: #000000;
+    border: #000000 solid 1px;
+    cursor: pointer;
+}
+.botaoMenuClose:hover{
+    padding: 0px 2px;
+    margin-right: 2px;
+    color: #000000;
+    background-color: red;
+    border-radius: 50%;
+    transform: rotate(180deg);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/*geral*/
+.conteudos{
+    background-color: rgba(255, 255, 255, 0.742);
+    margin: auto;
+    
+}
+.conteudosOcultar{
+    display: none;
+}
+
+.conteudo{
+    height: calc(100vh - 54px);
+    margin-top: 54px;
+}
+.descricaoConteudo, .conteudoTopico{
+    margin: 20px 10px;
+    margin-left: 25px;
+}
+
+/*conteudoInformacoesPessoal*/
+#conteudoInformacoesPessoal{
+    display: grid;
+    grid-template-columns: auto 300px;
+	background:url(img/fundo/fundoApresentacao.png) repeat-x fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+.informacoesPessoal{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.872);
+}
+#informacaoPessoalEsquerda{
+    margin: auto 30px;
+    margin-left: 50px;
+    border-radius: 10px;
+    padding:  10px;
+}
+.descricaoPerfilProfissionalEsquerda{
+    font-size: 30px;
+}
+#nomeDonoEsquerda{
+    font-size: 37px;
+    font-weight: bold;
+}
+.descricaoDivisaoInformacaoPessoalEsquerda:first-child{
+    margin-top: 25px;
+}
+.descricaoDivisaoInformacaoPessoalEsquerda{
+    font-size: 20px;
+    padding: 10px 0px;
+    text-indent: 25px;
+    text-align: justify;
+}
+
+#informacoesPessoalDireita{
+    background-color: #1E90FF;
+    /* background-color: #62b1ff; */
+    height: 100%;
+    color: #000000;
+}
+#informacaoPessoalDireita{
+    margin: auto;
+    padding: 10px;
+    justify-content: center;
+    margin: auto;
+}
+#divisaoInformacaoPessoalTopo{
+    margin: 15px 0px;
+}
+.divisaoFoto{
+    display: flex;
+}
+.fotoDono{
+    margin: auto;
+    width: 45%;
+    border-radius: 50%;
+}
+#nomeDonoDireita{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+}
+.descricaoPerfilProfissionalDireita{
+    text-align: center;
+}
+.descricaoPerfilProfissionalDireita#descricaoPerfilProfissionalTexto{
+    font-size: 20px;
+    padding: 5px 0px;
+}
+.descricaoPerfilProfissionalDireita#descricaoPerfilProfissionalTitulo{
+    font-size: 20px;
+    padding: 5px 0px;
+    padding-top: 20px;
+}
+.divdescricaoPerfilProfissionalDireita{
+    text-align: center;
+    margin: 10px;
+}
+.divisaoIcones{
+    display: flex;
+}
+
+.divisaoIcone{
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+}
+.divisaoIcone::before {
+    padding: 5px 16px;
+    /* background-color: #ffffffa0; */
+    background-color: #ffffff;
+    border: #ffffff 1px solid;
+    color: #1E90FF;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.imagemIcone{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    border: rgb(156, 156, 156) 1px solid;
+    animation: imagemIcone 1.5s infinite alternate;
+}
+
+@keyframes imagemIcone {
+    from {
+        transform:translateX(0) scale(0.9);
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+    }
+}
+/*.divisaoIcone{
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+
+}
+.divisaoIcone::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    animation: clippath 3s infinite linear; 
+}
+
+@keyframes clippath {
+    0%,
+    100% {
+        clip-path: inset(0 0 0 95% );
+    }
+    25% {
+        clip-path: inset(95% 0 0 0);
+    }
+    50% {
+        clip-path: inset(0 95%  0 0);
+    }
+    75% {
+        clip-path: inset(0 0 95% 0);
+    }
+}
+.imagemIcone{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    animation: imagemIcone 1.5s infinite alternate;
+}
+@keyframes imagemIcone {
+    from {
+        transform:translateX(0) scale(0.9);
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+    }
+} */
+.divisaoBotaoBaixarCV{
+    display: flex;
+}
+.divisaoBotaoBaixar{
+    margin: 0px auto;
+    margin-top: 20px;
+}
+.botaoBaixar{
+    padding: 5px 16px;
+    /* background-color: #ffffffa0; */
+    background-color: #ffffff;
+    border: #ffffff 1px solid;
+    color: #1E90FF;
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+    animation: botaoBaixar 1.5s infinite alternate;
+}
+@keyframes botaoBaixar {
+    from {
+        transform:translateX(0) scale(0.9);
+        border-radius: 5px;
+        /* opacity: 0; */
+    }
+    to {
+        transform:translateX(0) scale(1.0);
+        border-radius: 10px;
+    }
+}
+
+.botaoBaixar:hover,.botaoBaixar:focus {
+    /* background-color: #000000a0;
+    border: #000000 1px solid; */
+    /* font-size: 19px;
+    padding: 4px; */
+    border-radius: 10px;
+    transform:translateX(0) scale(1.1);
+    animation: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* botão topo */
+#conteudoBotaoTopo{
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    padding: 5px;
+}
+#botaoInicioConteudo{
+    color: rgba(255, 255, 255, 0.542);
+    font-size: 28px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.494);
+    border-radius: 10px;
+}
+#botaoInicioConteudo:hover{
+    color: #000;    
+    background-color: rgba(0, 0, 0, 0.694);
+}
+
+
+@media print{
+    body{
+        background:  #ffffff;
+    }
+    #conteudoBotao{
+        display: none;
+    }
+
+    hr, .topo, .menu, #informacoesPessoalDireita, #perfilProfissional, .descricaoDivisaoInformacaoPessoalEsquerda, #conteudoRedes, #conteudoDownload, .conteudoBotao{
+        display: none;
+    }
+    .conteudo{
+        padding: 2px 20px;
+    }
+    .nomeCertificado{
+    text-decoration: none;
+}
+}

@@ -332,7 +332,7 @@ body::-webkit-scrollbar-thumb {
     transform: scaleX(1);
 }
 .linkCertificado:visited{
-    color: #002040;
+    color: #000810;
 }
 .descricaoFormacao, .tempoFormacao{
     font-size: 20px;
